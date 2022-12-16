@@ -22,16 +22,22 @@ GROUP BY platform;
 --compared to mobile web 2013 and server and web data starting capture in 2012.
 
 -- Exercise 3:
--- Count item views by category
--- You found this table item_views_temp -- can you use it?
--- hint: this table doesn't have dates.
+-- Imagine that you need to count item views by day. You found this table item_views_by_category_temp 
+-- should you use it to answer your questiuon?
 
 SELECT *
 FROM dsv1069.item_views_by_category_temp
 
+-- # not a good idea to use this table, as it has temp in the name... there's also no date information. I would recommend not using this table
 
--- not a good idea to use this table, as it has temp in the name...
 
+-- Exercise 4:
+-- ​Is this the right way to join orders to users? Is this the right way this join.
+
+SELECT *
+FROM dsv1069.orders
+JOIN dsv1069.users
+ON orders.user_id = users.parent_user_id
 
 
 
